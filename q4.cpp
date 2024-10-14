@@ -12,18 +12,15 @@ int main()
     cout << "Enter rhe cols : ";
     cin >> col;
 
-    cout  << endl;
-
     int arr[row][col];
 
     for (int i = 0; i < row; i++)
     {
         for (int j = 0; j < col; j++)
         {
-            cout << "enter the value : ";
+            cout << "enter the valure of postion : [" << i << "]" << "[" << j << "] : ";
             cin >> arr[i][j];
         }
-        cout << endl;
     }
 
     for (int i = 0; i < row; i++)
@@ -34,19 +31,30 @@ int main()
         }
         cout << endl;
     }
-
-    int k,srow,scol;
-
-    cout << "enter the row :";
-    cin >> srow; 
-   
-    for ( k = 0; k < col; k++)
+    
+    cout << endl<< "First row : ";
+    for (int k = 0; k < col; k++)
     {
-        cout << arr[srow][k] << " ";
+        cout << arr[0][k] << " ";
     }
     
+    cout << endl<< "Last row : ";
+    for (int k = 0; k < col; k++)
+    {
+        cout << arr[row-1][k] << " ";
+    }
     
-    cout << endl;
+    cout << endl<< "First col : ";
+    for (int k = 0; k < row; k++)
+    {
+        cout << arr[k][0] << " ";
+    }
+    
+    cout << endl<< "Last col : ";
+    for (int k = 0; k < row; k++)
+    {
+        cout << arr[k][col-1] << " ";
+    }
     
 
     return 0;
